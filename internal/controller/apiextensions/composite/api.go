@@ -317,7 +317,7 @@ func (s *APIDefaultCompositionSelector) SelectComposition(ctx context.Context, c
 
 // SelectCompositionRevision selects the default composition revision if neither a reference nor
 // selector is given in composite resource.
-func (s *APIDefaultCompositionSelector) SelectCompositionRevision(ctx context.Context, cp resource.Composite) error {
+func (s *APIDefaultCompositionSelector) SelectCompositionRevision(ctx context.Context, cp xresource.Composite) error {
 	if cp.GetCompositionRevisionSelector() != nil {
 		return nil
 	}
